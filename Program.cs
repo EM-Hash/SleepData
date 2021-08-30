@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace SleepData
 {
@@ -30,6 +31,8 @@ namespace SleepData
                 
                 // random number generator
                 Random rnd = new Random();
+                // create file
+                StreamWriter sw = new StreamWriter("data.txt");
 
                 // loop for the desired # of weeks
                 while (dataStartDate < dataEndDate)
@@ -42,10 +45,12 @@ namespace SleepData
                         hours[i] = rnd.Next(4, 13);
                     }
                     // M/d/yyyy,#|#|#|#|#|#|#
-                    Console.WriteLine($"{dataStartDate:M/d/yy},{string.Join("|", hours)}");
+                    //Console.WriteLine($"{dataStartDate:M/d/yy},{string.Join("|", hours)}");
+                    sw.WriteLine($"{dataStartDate:M/d/yyyy},{string.Join("|", hours)}");
                     // add 1 week to date
                     dataStartDate = dataStartDate.AddDays(7);
                 }
+                sw.Close();
             }
             else if (resp == "2")
             {
