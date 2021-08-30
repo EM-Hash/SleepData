@@ -5,6 +5,7 @@ namespace SleepData
 {
     class Program
     {
+        //This progrma is used to track sleep data
         static void Main(string[] args)
         {
             // ask for input
