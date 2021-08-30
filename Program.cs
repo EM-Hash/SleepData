@@ -6,6 +6,7 @@ namespace SleepData
     class Program
     {
         //This progrma is used to track sleep data
+        //TODO: add in loop to go through program repeatedly 
         static void Main(string[] args)
         {
             // ask for input
@@ -56,6 +57,17 @@ namespace SleepData
             else if (resp == "2")
             {
                 // TODO: parse data file
+
+                /*
+                FORMAT NOTES
+                Day of week = spacing of 3, right align
+                Tot and Avg = spacing of 4, right align
+                Avg = float, .0 precision
+                All others = whole integers
+                1 break line between each week
+                Week of... is unformatted
+                Date is (MMM, dd, yyyy)
+                */
                 //Message to show it's working (TO DELETE)
                 Console.WriteLine("You entered 2");
 
